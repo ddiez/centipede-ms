@@ -1,6 +1,8 @@
 centipede-ms
 ============
 
+[![Build Status](https://travis-ci.org/ddiez/centipede-ms.svg?branch=master)](https://travis-ci.org/ddiez/centipede-ms)
+
 # Introduction
 
 A docker container for [msCentipede](https://github.com/rajanil/msCentipede).
