@@ -18,7 +18,14 @@ RUN apt-get update -y && \
     mkdir -p /opt/bin && \
     mkdir -p /opt/lib/centipede-ms && \
     cp /tmp/msCentipede/call_binding.py /opt/lib/centipede-ms/ && \
-    cp /tmp/msCentipede/load_data.py /opt/lib/centipede-ms/
+    cp /tmp/msCentipede/load_data.py /opt/lib/centipede-ms/ && \
+
+    # clean up.
+    rm -rf /tmp/msCentipede && \
+    apt-get clean -y && \
+    apt-get purge -y \
+     git && \
+    apt-get autoremove -y
 
 COPY centipede-ms /opt/bin
 RUN chmod +x /opt/bin/centipede-ms
